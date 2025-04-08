@@ -1,0 +1,7 @@
+az acr task create \
+  --registry containerregistry4recpocpaul.azurecr.io \
+  --name myTask \
+  --context https://github.com/Paul-MHP/azure-webapp-docker.git \
+  --file Dockerfile \
+  --image demo-app:{{.Run.ID}} \
+  --commit-trigger-enabled false
